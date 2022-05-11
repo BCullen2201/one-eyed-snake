@@ -3,15 +3,15 @@
 # i made this at like 3am to learn how to work with classes in python
 
 from os import system
-import random
+from random import choice
 
-class penis: # this is the penis, penis defined, also can show the penis from this here
+class penis:
     def __init__(self, pLength, pGirth, testeCount):
         self.pLength = pLength
         self.pGirth = pGirth
         self.testeCount = testeCount
 
-    def show(self): # this function will be used to tell the user all about their new penis
+    def show(self):
         if self.pLength == 1:
             print(f"Penis length is {self.pLength} inch.")
         else:
@@ -27,18 +27,18 @@ class penis: # this is the penis, penis defined, also can show the penis from th
         else:
             print(f"{self.testeCount} balls.")
 
-def buildPenis(): # gives the penis its specs, like length, girth, and how many balls
+def buildPenis():
     inches = [1,2,3,4,5,6,7,8,9,10,11,12] # 12 inches makes a foot
     balls = [1,2] # imagine having 1 ball lmao (im really sorry if you do only have 1 testicle that must be devastating)
 
-    length = random.choice(inches)
-    girth = random.choice(inches)
-    numOfBalls = random.choice(balls)
+    length = choice(inches)
+    girth = choice(inches)
+    numOfBalls = choice(balls)
 
     result = penis(length, girth, numOfBalls)
     result.show()
 
-def main(): # main function, gets called at start of program
+def main():
     buildPenis()
 
 while True: # infinite loop keeps window open
