@@ -39,9 +39,10 @@ def buildPenis():
     result.show()
 
 def main():
+    system("clear")
     buildPenis()
 
-while True: # infinite loop keeps window open
-    system("clear") # clears screen so results are more apparent
-    main()
-    input("Press ENTER to create another penis...") # keeps loop from running wild
+if __name__ == "__main__":
+    while True:
+        main()
+        input("Press ENTER to create another penis...")
